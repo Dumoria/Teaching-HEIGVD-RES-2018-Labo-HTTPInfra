@@ -2,13 +2,21 @@ $(function() {
         console.log("Loading students");
 
         function loadStudents(){
-                $.getJSON( "/api/students/", function( students){
+                $.getJSON( "/api/students/", function(students){
                         console.log(students);
-                        var message = "Nobody is here";
-                        if( students.length > 0){
-                                message = students[0].firstName + " " + students[0].lastName;
-                        }
-                        $(".container").text(message);
+                        var matrix = "Matrix = {";
+						for(var i = 0; i < students.length; ++i){
+							matrix += '{';
+							for(var j = 0; j < students.length; ++j){
+								matrix += students[i][j];
+							}
+							matrix += '}';
+							if(i < students.length - 1)
+								matrix += ", ";
+						}
+				matrix += '}';
+						
+                        $(".container").text(matrix);
                 });
         };
 
