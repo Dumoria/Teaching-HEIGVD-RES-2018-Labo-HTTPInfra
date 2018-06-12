@@ -4,10 +4,6 @@
 var Chance = require('chance');
 var chance = new Chance();
 
-//Server HTTP
-var express = require('express');
-var app = express();
-
 //HTTP request parser
 const bodyParser = require("body-parser");
 
@@ -17,43 +13,49 @@ var xml = require('xml');
 //Parser JSON to HTML
 var json2html = require('html2json').json2html;
 
+//-------------HTTP gestion----------
 
+//Construction d'une app express acceptant les requêtes HTTP
+var express = require('express');
+var app = express();
 
-//-----------Server gestion----------
-/*
-app.use(bodyParser.json());
-
-app.post("/", function (req, res) {
-    console.log(req.body.user.name)
-});*/
-
+//Pour les requêtes get avec uniquement un / dans l'url
 app.get('/', function(req, res){
-	
-	res.send(generateStudents());
+	res.send(generateMatrix());
+	//res.send(generateStudents()); //uncomment for webcast's dynamic content
 });
 
-
-
+//Se mettre à l'écoute sur le port 3000
 app.listen(3000, function(){
 	console.log('Accepting HTTP requests on port 3000');
 });
-/*
-function updateTime(){
-	seconde++;
-	if(!(seconde % 60)){
-		minute++;
-		seconde = 0;
+
+//Fonction pour contenu dynamique custom
+function generateMatrix(){
+	
+	var size = chance.integer({
+		min : 0,
+		max : 10
+	});
+	
+	var matrix = [];
+	for(var line = 0; line < size; ++line){
+		
+		matrix[line] = new Array(size);
+		
+		for(var column = 0; column < size; ++column){
+			matrix[line][column] = chance.integer({
+				min : 0,
+				max : 1
+			});
+		}
 	}
+	console.log(matrix);
+	return matrix;
 }
 
-var timer = setInterval(updateTime(), 1000);
 
-function setTime(){
-
-}*/
-
-
-//--------Random name generator-----------
+//Fonction pour contenu dynamique webcast
 function generateStudents(){
 	var numberOfStudents = chance.integer({
 		min : 0,
@@ -81,3 +83,19 @@ function generateStudents(){
 	console.log(students);
 	return students;
 }
+
+
+/*
+function updateTime(){
+	seconde++;
+	if(!(seconde % 60)){
+		minute++;
+		seconde = 0;
+	}
+}
+
+var timer = setInterval(updateTime(), 1000);
+
+function setTime(){
+
+}*/
