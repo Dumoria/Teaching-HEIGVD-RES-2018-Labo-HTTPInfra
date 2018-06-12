@@ -16,7 +16,7 @@ $(function() {
 						}
 				matrix += '}';
 						
-                        $(".container").text(matrix);
+                $(".container").text(matrix);
                 });
         };
 
