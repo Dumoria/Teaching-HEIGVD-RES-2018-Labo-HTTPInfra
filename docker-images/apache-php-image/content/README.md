@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # [Start Bootstrap - Business Casual](https://startbootstrap.com/template-overviews/business-casual/)
 
 [Business Casual](http://startbootstrap.com/template-overviews/business-casual/) is a multipurpose website theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/). This theme features a landing page, about page, blog page, and a contact page along with various custom styles and components.
@@ -15,14 +16,40 @@
 [![Build Status](https://travis-ci.org/BlackrockDigital/startbootstrap-business-casual.svg?branch=master)](https://travis-ci.org/BlackrockDigital/startbootstrap-business-casual)
 [![dependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-business-casual/status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-business-casual)
 [![devDependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-business-casual/dev-status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-business-casual?type=dev)
+=======
+# [Start Bootstrap - Grayscale](https://startbootstrap.com/template-overviews/grayscale/)
+
+[Grayscale](http://startbootstrap.com/template-overviews/grayscale/) is a multipurpose, one page HTML theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).
+
+## Preview
+
+[![Grayscale Preview](https://startbootstrap.com/assets/img/templates/grayscale.jpg)](https://blackrockdigital.github.io/startbootstrap-grayscale/)
+
+**[View Live Preview](https://blackrockdigital.github.io/startbootstrap-grayscale/)**
+
+## Status
+
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/BlackrockDigital/startbootstrap-grayscale/master/LICENSE)
+[![npm version](https://img.shields.io/npm/v/startbootstrap-grayscale.svg)](https://www.npmjs.com/package/startbootstrap-grayscale)
+[![Build Status](https://travis-ci.org/BlackrockDigital/startbootstrap-grayscale.svg?branch=master)](https://travis-ci.org/BlackrockDigital/startbootstrap-grayscale)
+[![dependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-grayscale/status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-grayscale)
+[![devDependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-grayscale/dev-status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-grayscale?type=dev)
+>>>>>>> c65df4ee4157e5579f63b5ad6a831ac4b521f865
 
 ## Download and Installation
 
 To begin using this template, choose one of the following options to get started:
+<<<<<<< HEAD
 * [Download the latest release on Start Bootstrap](https://startbootstrap.com/template-overviews/business-casual/)
 * Install via npm: `npm i startbootstrap-business-casual`
 * Clone the repo: `git clone https://github.com/BlackrockDigital/startbootstrap-business-casual.git`
 * [Fork, Clone, or Download on GitHub](https://github.com/BlackrockDigital/startbootstrap-business-casual)
+=======
+* [Download the latest release on Start Bootstrap](https://startbootstrap.com/template-overviews/grayscale/)
+* Install via npm: `npm i startbootstrap-grayscale`
+* Clone the repo: `git clone https://github.com/BlackrockDigital/startbootstrap-grayscale.git`
+* [Fork, Clone, or Download on GitHub](https://github.com/BlackrockDigital/startbootstrap-grayscale)
+>>>>>>> c65df4ee4157e5579f63b5ad6a831ac4b521f865
 
 ## Usage
 
@@ -36,7 +63,11 @@ After installation, run `npm install` and then run `gulp dev` which will open up
 
 ## Bugs and Issues
 
+<<<<<<< HEAD
 Have a bug or an issue with this template? [Open a new issue](https://github.com/BlackrockDigital/startbootstrap-business-casual/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](http://startbootstrap.com/template-overviews/business-casual/).
+=======
+Have a bug or an issue with this template? [Open a new issue](https://github.com/BlackrockDigital/startbootstrap-grayscale/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](http://startbootstrap.com/template-overviews/grayscale/).
+>>>>>>> c65df4ee4157e5579f63b5ad6a831ac4b521f865
 
 ## Custom Builds
 
@@ -59,4 +90,8 @@ Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework 
 
 ## Copyright and License
 
+<<<<<<< HEAD
 Copyright 2013-2018 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-business-casual/blob/gh-pages/LICENSE) license.
+=======
+Copyright 2013-2018 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-grayscale/blob/gh-pages/LICENSE) license.
+>>>>>>> c65df4ee4157e5579f63b5ad6a831ac4b521f865

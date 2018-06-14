@@ -1,8 +1,15 @@
 {
+<<<<<<< HEAD
     "title": "Business Casual",
     "name": "startbootstrap-business-casual",
     "version": "4.1.1",
     "description": "A casual HTML website theme for businesses built with Bootstrap",
+=======
+    "title": "Grayscale",
+    "name": "startbootstrap-grayscale",
+    "version": "4.1.1",
+    "description": "A grayscale one page HTML theme for Bootstrap.",
+>>>>>>> c65df4ee4157e5579f63b5ad6a831ac4b521f865
     "keywords": [
         "css",
         "sass",
@@ -11,9 +18,15 @@
         "theme",
         "template"
     ],
+<<<<<<< HEAD
     "homepage": "https://startbootstrap.com/template-overviews/business-casual",
     "bugs": {
         "url": "https://github.com/BlackrockDigital/startbootstrap-business-casual/issues",
+=======
+    "homepage": "https://startbootstrap.com/template-overviews/grayscale",
+    "bugs": {
+        "url": "https://github.com/BlackrockDigital/startbootstrap-grayscale/issues",
+>>>>>>> c65df4ee4157e5579f63b5ad6a831ac4b521f865
         "email": "feedback@startbootstrap.com"
     },
     "license": "MIT",
@@ -23,11 +36,21 @@
     ],
     "repository": {
         "type": "git",
+<<<<<<< HEAD
         "url": "https://github.com/BlackrockDigital/startbootstrap-business-casual.git"
     },
     "dependencies": {
         "bootstrap": "4.1.1",
         "jquery": "3.3.1"
+=======
+        "url": "https://github.com/BlackrockDigital/startbootstrap-grayscale.git"
+    },
+    "dependencies": {
+        "bootstrap": "4.1.1",
+        "font-awesome": "4.7.0",
+        "jquery": "3.3.1",
+        "jquery.easing": "^1.4.1"
+>>>>>>> c65df4ee4157e5579f63b5ad6a831ac4b521f865
     },
     "devDependencies": {
         "browser-sync": "2.24.3",

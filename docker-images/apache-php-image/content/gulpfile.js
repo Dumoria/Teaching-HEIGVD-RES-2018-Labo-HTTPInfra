@@ -33,6 +33,15 @@ gulp.task('vendor', function() {
     ])
     .pipe(gulp.dest('./vendor/jquery'))
 
+<<<<<<< HEAD
+=======
+  // jQuery Easing
+  gulp.src([
+      './node_modules/jquery.easing/*.js'
+    ])
+    .pipe(gulp.dest('./vendor/jquery-easing'))
+
+>>>>>>> c65df4ee4157e5579f63b5ad6a831ac4b521f865
 });
 
 // Compile SCSS
