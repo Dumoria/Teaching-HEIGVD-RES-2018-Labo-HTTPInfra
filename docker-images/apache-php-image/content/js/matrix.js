@@ -22,7 +22,7 @@ $(function() {
 						
 						//Change le contenu des balises ayant commme classe
 						//"container" et le remplace par notre contenu dynamique
-                        $(".container").text(matrix);
+                        $(".intro-text").text(matrix);
                 });
         };
 
