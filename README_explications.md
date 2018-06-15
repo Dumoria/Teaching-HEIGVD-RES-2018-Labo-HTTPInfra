@@ -164,9 +164,42 @@ Construire l'image:
 
 Puis exécuter l'image:
 
-    docker run -d -e STATIC_APP=IPContStatique:80 -e DYNAMIC_APP = IPContDynamique:3000 -–name apache_rp -p 8080:80 res/apache_rp
+    docker run -d -e STATIC_APP=IP_appache_php:80 -e DYNAMIC_APP=IP_express_dynamic:3000 -–name apache_rp -p 8080:80 res/apache_rp
 
 Dans le cas du lancement de plusieurs containers venant de la même image, s'assurer de leur attribuer des noms différents lors de l'exécution.
+
+Pour tester notre nouvelle configuration, nous allons:
+  - Lancer une dizaine de container dynamique. Nous attribuerons un nom au dernier.
+
+  - Lancer une dizaine de container statique. Nous attribuerons un nom au dernier.
+
+  - Lancer notre container reverse-proxy avec les adresses ip de nos deux containers portant un nom.
+
+Ce scénario est intéressant car il permet d'être parfaitement sûr que nous ne tomberons pas par chance sur les adresses IP hard codées de notre ancienne configuration. Nous lançons les containers dynamique avant les statiques, par opposition aux premières étapes. De même, nous décidons de lancer dix containers de chaque type et de ne rechercher l'IP que des derniers de chaques afin d'être sûr que ces deux containers ne reçoivent pas une des deux IP de notre ancienne configuration 172.17.0.2 et 172.17.0.3
+
+Nous exécutons donc les commandes suivantes:
+
+    Pour le contenu statique (dossier apache-php-image):
+    docker build -t res/apache_php .
+    docker run -d res/apache_php
+    docker run -d res/apache_php
+    ...
+    docker run -d --name apache_php res/apache_php
+
+    Pour le contenu dynamique (dossier express-image):
+    docker build -t res/express_matrix .
+    docker run -d res/express_matrix
+    docker run -d res/express_matrix
+    ...
+    docker run -d --name express_dynamic res/express_matrix
+
+    Pour le reverse-proxy (dossier apache-reverse-proxy):
+    docker build -t res/apache_rp .
+    docker inspect apache_php | grep -i ipaddr
+    docker inspect express_dynamic | grep -i ipaddr
+    docker run -d -e STATIC_APP=IP_appache_php:80 -e DYNAMIC_APP=IP_express_dynamic:3000 -–name apache_rp -p 8080:80 res/apache_rp
+
+
 
 #### Objectif 6
 Pour le Management UI, nous avons décidé d'utiliser l'application Portainer. C'est un excellent outil capable de réaliser toutes les opérations désirées sur nos images et container. Pour utiliser cette dernière, il suffit de lancer nos containers, puis de rentrer les deux commandes suivantes dans Docker:
